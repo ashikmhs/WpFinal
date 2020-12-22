@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NextActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <Button
+            android:onClick="bmi"
+            android:id="@+id/bmiBTN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Calculate BMI"/>
+
+        <Button
+            android:onClick="fahrenheitToCelsius"
+            android:id="@+id/fahrenheitToCelsius"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fahrenheit to Celsius"/>
+
+        <Button
+            android:onClick="celsiusToFahrenheit"
+            android:id="@+id/celsiusToFahrenheitBTN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Celsius to Fahrenheit"/>
+
+    </LinearLayout>
+
+    <fragment
+        android:name="com.example.wp_final.BMIFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragmentID"/>
+
+</LinearLayout>
